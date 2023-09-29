@@ -9,7 +9,7 @@ const Navbar = (props) => {
   let setIsloggeIn = props.setIsloggeIn
 
   return (
-    <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto'>
+    <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto gap-x-2'>
 
       <Link to="/">
         <img src={logo} alt='logo' width={160} height={32} loading='lazy'/>
@@ -33,15 +33,15 @@ const Navbar = (props) => {
       <div className='flex iteams-center gap-x-4'>
         { !isLoggedIn && //login visbile when the condtion is login nsel) or !isLoggIn means jb mera login nhi heyhey true zl tr show the login button
           <Link to="/login">
-            c<button className='bg-richblack-800  text-richblack-100 py-[8px] px-[12px] rounded-[8px] border-richblack-700 hover:text-orange-700' >
+            <button className='bg-richblack-800  text-richblack-100 py-[8px] px-[12px] rounded-[8px] border-richblack-700 hover:text-orange-700 ' >
               Login
             </button>
           </Link>
         }
          { !isLoggedIn && //visble singup button when login user not login
           <Link to="/signup">
-            <button className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px] border-richblack-700 hover:text-orange-700'  >
-              Sing Up
+            <button className='bg-richblack-800 text-richblack-100 py-[8px] px-[12px] rounded-[8px] border-richblack-700 hover:text-orange-700 '  >
+              SingUp
             </button>
           </Link>
         }
